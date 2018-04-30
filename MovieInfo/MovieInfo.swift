@@ -19,14 +19,10 @@ struct BoxOfficeResult {
 
 struct DailyBoxOfficeList {
     let movieNm: String
-    let rankOldAndNew: RankOldAndNew
+    let rankOldAndNew: String
     let salesAmt, rankInten, scrnCnt, openDt: String
     let audiCnt, audiInten, movieCD, audiChange: String
     let rnum, salesShare, audiAcc, salesChange: String
     let showCnt, rank, salesInten, salesAcc: String
-}
-
-enum RankOldAndNew {
-    case old
 }
 
