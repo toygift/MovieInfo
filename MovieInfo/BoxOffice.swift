@@ -10,10 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import DateToolsSwift
+import MKProgress
 
 class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
+    
     var dailyBoxOfficeList: [DailyBoxOfficeList] = [] {
         didSet {
             self.tableView.delegate = self
@@ -24,7 +26,8 @@ class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        MKProgress.config.activityIndicatorColor = .darkGray
+        MKProgress.config.hudColor = .clear
         let yesterday = Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.current)
         
         KobisAPI.shared.dayBoxOffice(date: yesterday, indicator: true) { (res) -> (Void) in
