@@ -160,7 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WJl-FW-21T"/>
                     <connections>
-                        <outlet property="tableView" destination="D9T-pW-LzA" id="HB7-tT-RM2"/>
+                        <outlet property="tableView" destination="D9T-pW-LzA" id="zGU-yd-K6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -336,7 +336,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9xh-jn-Lqb"/>
                     <connections>
-                        <outlet property="tableView" destination="V5m-AE-yyJ" id="EqT-jV-Zkm"/>
+                        <outlet property="tableView" destination="V5m-AE-yyJ" id="sYP-Nf-Rdw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDN-j3-fOZ" sceneMemberID="firstResponder"/>

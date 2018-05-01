@@ -18,6 +18,7 @@
 		3F9DAF4A208A535100C480F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DAF49208A535100C480F7 /* MovieInfo.swift */; };
 		3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */; };
 		3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0768A20984D7500391BC9 /* TmdbAPI.swift */; };
+		3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076922098811B00391BC9 /* BoxOffice.swift */; };
 		5DBFDE87A0121F66FF2872CF /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32C4DE524F427EC9DBFF2D /* Pods_MovieInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		3F9DAF49208A535100C480F7 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOffice.swift; sourceTree = "<group>"; };
 		3FC0768A20984D7500391BC9 /* TmdbAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbAPI.swift; sourceTree = "<group>"; };
+		3FC076922098811B00391BC9 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
 		B479C1365FA5AB7001668511 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
 		D8CE9C27198BF3309FE9A16A /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3F6A3C23208A45B90026C4F9 /* AppDelegate.swift */,
+				3FC076922098811B00391BC9 /* BoxOffice.swift */,
 				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
 				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
 				3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */,
@@ -245,6 +248,7 @@
 			files = (
 				3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */,
 				3F2588D020978892009AC275 /* KobisData.swift in Sources */,
+				3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */,
 				3F6A3C26208A45B90026C4F9 /* DailyBoxOffice.swift in Sources */,
 				3F9DAF4A208A535100C480F7 /* MovieInfo.swift in Sources */,
 				3F2588D220979562009AC275 /* BoxOfficeTableViewCell.swift in Sources */,

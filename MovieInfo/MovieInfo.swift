@@ -13,11 +13,11 @@ struct MovieInfo {
 }
 
 struct BoxOfficeResult {
-    let dailyBoxOfficeList: [DailyBoxOfficeList]
+    let boxOfficeList: [BoxOfficeList]
     let showRange, boxofficeType: String
 }
 
-struct DailyBoxOfficeList {
+struct BoxOfficeList {
     let movieNm: String
     let rankOldAndNew: String
     let salesAmt, salesInten, salesAcc, salesShare, salesChange: String
