@@ -20,9 +20,9 @@ struct BoxOfficeResult {
 struct DailyBoxOfficeList {
     let movieNm: String
     let rankOldAndNew: String
-    let salesAmt, rankInten, scrnCnt, openDt: String
-    let audiCnt, audiInten, movieCD, audiChange: String
-    let rnum, salesShare, audiAcc, salesChange: String
-    let showCnt, rank, salesInten, salesAcc: String
+    let salesAmt, salesInten, salesAcc, salesShare, salesChange: String
+    let audiCnt, audiInten, audiAcc, audiChange: String
+    let rnum, rank, rankInten: String
+    let showCnt, scrnCnt, openDt, movieCD: String
 }
 

@@ -11,11 +11,13 @@
 		3F2588D020978892009AC275 /* KobisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588CF20978892009AC275 /* KobisData.swift */; };
 		3F2588D220979562009AC275 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */; };
 		3F6A3C24208A45B90026C4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A3C23208A45B90026C4F9 /* AppDelegate.swift */; };
-		3F6A3C26208A45B90026C4F9 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A3C25208A45B90026C4F9 /* BoxOffice.swift */; };
+		3F6A3C26208A45B90026C4F9 /* DailyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */; };
 		3F6A3C29208A45B90026C4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A3C27208A45B90026C4F9 /* Main.storyboard */; };
 		3F6A3C2B208A45B90026C4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A3C2A208A45B90026C4F9 /* Assets.xcassets */; };
 		3F6A3C2E208A45B90026C4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A3C2C208A45B90026C4F9 /* LaunchScreen.storyboard */; };
 		3F9DAF4A208A535100C480F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DAF49208A535100C480F7 /* MovieInfo.swift */; };
+		3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */; };
+		3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0768A20984D7500391BC9 /* TmdbAPI.swift */; };
 		5DBFDE87A0121F66FF2872CF /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32C4DE524F427EC9DBFF2D /* Pods_MovieInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,12 +28,14 @@
 		3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
 		3F6A3C20208A45B90026C4F9 /* MovieInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6A3C23208A45B90026C4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F6A3C25208A45B90026C4F9 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
+		3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBoxOffice.swift; sourceTree = "<group>"; };
 		3F6A3C28208A45B90026C4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F6A3C2A208A45B90026C4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F6A3C2D208A45B90026C4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F6A3C2F208A45B90026C4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9DAF49208A535100C480F7 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOffice.swift; sourceTree = "<group>"; };
+		3FC0768A20984D7500391BC9 /* TmdbAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbAPI.swift; sourceTree = "<group>"; };
 		B479C1365FA5AB7001668511 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
 		D8CE9C27198BF3309FE9A16A /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				3F6A3C23208A45B90026C4F9 /* AppDelegate.swift */,
-				3F6A3C25208A45B90026C4F9 /* BoxOffice.swift */,
+				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
+				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
 				3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */,
 				3F6A3C27208A45B90026C4F9 /* Main.storyboard */,
 				3F6A3C2A208A45B90026C4F9 /* Assets.xcassets */,
@@ -79,6 +84,7 @@
 				3F9DAF49208A535100C480F7 /* MovieInfo.swift */,
 				3F2588CF20978892009AC275 /* KobisData.swift */,
 				3F2588CD20978554009AC275 /* KobisAPI.swift */,
+				3FC0768A20984D7500391BC9 /* TmdbAPI.swift */,
 			);
 			path = MovieInfo;
 			sourceTree = "<group>";
@@ -130,7 +136,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Jaeseong;
 				TargetAttributes = {
 					3F6A3C1F208A45B90026C4F9 = {
@@ -237,10 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */,
 				3F2588D020978892009AC275 /* KobisData.swift in Sources */,
-				3F6A3C26208A45B90026C4F9 /* BoxOffice.swift in Sources */,
+				3F6A3C26208A45B90026C4F9 /* DailyBoxOffice.swift in Sources */,
 				3F9DAF4A208A535100C480F7 /* MovieInfo.swift in Sources */,
 				3F2588D220979562009AC275 /* BoxOfficeTableViewCell.swift in Sources */,
+				3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */,
 				3F2588CE20978554009AC275 /* KobisAPI.swift in Sources */,
 				3F6A3C24208A45B90026C4F9 /* AppDelegate.swift in Sources */,
 			);
@@ -282,6 +290,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -289,6 +298,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -316,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -339,6 +349,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -346,6 +357,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -367,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

@@ -7,22 +7,73 @@
 //
 
 import UIKit
+import Kingfisher
+import SwiftyJSON
+import DateToolsSwift
 
 class BoxOfficeTableViewCell: UITableViewCell {
-
-    @IBOutlet var movienNm: UILabel!
+    
+    @IBOutlet weak var rank: UILabel!
+    @IBOutlet weak var movienNm: UILabel!
+    @IBOutlet weak var openDt: UILabel!
+    @IBOutlet weak var salesAmt: UILabel!
+    @IBOutlet weak var salesAcc: UILabel!
+    @IBOutlet weak var audiCnt: UILabel!
+    @IBOutlet weak var audiAcc: UILabel!
+    @IBOutlet weak var scrnCnt: UILabel!
+    @IBOutlet weak var poster: UIImageView!
+    
+    var posters: [JSON]!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    
     func setData(data: DailyBoxOfficeList) {
+        self.rank.text = data.rank
         self.movienNm.text = data.movieNm
+        self.openDt.text = data.openDt
+        self.salesAmt.text = currencyConvert(currency: data.salesAmt) + "(\(data.salesShare)%)" + "\n" + "전일대비 : (\(currencyConvert(currency: data.salesInten)))" + "(\(data.salesChange)%)"
+        self.salesAcc.text = currencyConvert(currency: data.salesAcc)
+        self.audiCnt.text = thousandConvert(number: data.audiCnt) + "명" + "\n" + "전일대비 : (\(thousandConvert(number: data.audiInten))명)" + "증감비율 : (\(data.audiChange)%)"
+        self.audiAcc.text = thousandConvert(number: data.audiAcc) + "명"
+        self.scrnCnt.text = thousandConvert(number: data.scrnCnt) + "(\(thousandConvert(number: data.showCnt))번 상영)"
+        
+        TmdbAPI.shared.getPoster(title: data.movieNm, indicator: true) { (res) -> (Void) in
+            if let json = res {
+                
+                for i in json["items"].arrayValue {
+                    print("old",dateFormatters.date(from: i["pubDate"].stringValue))
+                    if i["title"].stringValue.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: "") == data.movieNm {
+                        if dateFormatter.date(from: i["pubDate"].stringValue)  == newDate {
+                            
+                            self.poster.kf.setImage(with: URL(string: i["image"].stringValue), placeholder: nil, options: [.transition(ImageTransition.fade(0.5))], progressBlock: nil, completionHandler: nil)
+                        }
+                        
+                    }
+                }
+            }
+        }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    func currencyConvert(currency: String) -> String {
+        let currencyFormat = NumberFormatter()
+        currencyFormat.locale = Locale.current
+        currencyFormat.numberStyle = .currency
+        return currencyFormat.string(from: NSNumber(value:Double(currency)!))!
+    }
+    func thousandConvert(number: String) -> String {
+        let thousandFormat = NumberFormatter()
+        thousandFormat.numberStyle = .decimal
+        return thousandFormat.string(from: NSNumber(value:Double(number)!))!
+    }
+}
+extension String {
+    
 }

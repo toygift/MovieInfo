@@ -11,11 +11,10 @@ import Alamofire
 import SwiftyJSON
 import DateToolsSwift
 import MKProgress
-
-class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DailyBoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
-    
+    var data: BoxOfficeResult!
     var dailyBoxOfficeList: [DailyBoxOfficeList] = [] {
         didSet {
             self.tableView.delegate = self
@@ -30,22 +29,17 @@ class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
         MKProgress.config.hudColor = .clear
         let yesterday = Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.current)
         
-        KobisAPI.shared.dayBoxOffice(date: yesterday, indicator: true) { (res) -> (Void) in
+        KobisAPI.shared.dayBoxOffice(type: "daily", date: yesterday, indicator: true) { (res) -> (Void) in
             if let json = res {
-                let data = KobisData.shared.todayBoxOffice(response: json)
-                
-                self.dailyBoxOfficeList = data.dailyBoxOfficeList
-                print(self.dailyBoxOfficeList)
-                print(data.dailyBoxOfficeList.count)
+                self.data = KobisData.shared.dailyBoxOffice(response: json)
+                self.dailyBoxOfficeList = self.data.dailyBoxOfficeList
+                self.navigationItem.title = Date().subtract(1.days).format(with: "yyyy년MM월dd일", timeZone: TimeZone.current)
+                print(self.data)
             }
         }
     }
-    
-    // TODO: 데일리, 위클리
-
-    
 }
-extension BoxOffice {
+extension DailyBoxOffice {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dailyBoxOfficeList.count
     }
@@ -53,5 +47,8 @@ extension BoxOffice {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOffice", for: indexPath) as? BoxOfficeTableViewCell
         cell?.setData(data: self.dailyBoxOfficeList[indexPath.row])
         return cell!
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 500
     }
 }
