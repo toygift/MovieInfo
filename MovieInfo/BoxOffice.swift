@@ -35,6 +35,26 @@ extension BoxOffice {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOffice", for: indexPath) as? BoxOfficeTableViewCell
         cell?.setData(data: self.boxOfficeList[indexPath.row])
+//        KobisAPI.shared.aa(movieCd: self.data.boxOfficeList[indexPath.row].movieCd, indicator: true) { (res) -> (Void) in
+//            if let json = res {
+//                let direct = json["movieInfoResult"]["movieInfo"]["directors"][0]["peopleNm"].stringValue
+//                , directors: direct)
+//            }
+//        }
+//        TmdbAPI.shared.getPoster(title: data.movieNm, indicator: true) { (res) -> (Void) in
+//            if let json = res {
+//                print("json",json)
+//                for i in json["items"].arrayValue {
+//                    if i["title"].stringValue.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: "") == data.movieNm {
+//                        if i["director"].stringValue.replacingOccurrences(of: "|", with: "").contains(directors) {
+//
+//                            self.poster.kf.setImage(with: URL(string: i["image"].stringValue), placeholder: nil, options: [.transition(ImageTransition.fade(0.5))], progressBlock: nil, completionHandler: nil)
+//                        }
+//
+//                    }
+//                }
+//            }
+//        }
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

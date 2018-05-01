@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import DateToolsSwift
     
 class DailyBoxOffice: BoxOffice {
     
@@ -17,13 +15,14 @@ class DailyBoxOffice: BoxOffice {
        
         let yesterday = Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.current)
         
-        KobisAPI.shared.dayBoxOffice(type: "daily", date: yesterday, indicator: true) { (res) -> (Void) in
+        KobisAPI.shared.boxOffice(type: "daily", weekGb: nil, date: yesterday, indicator: true) { (res) -> (Void) in
             if let json = res {
+                print(json)
                 self.data = KobisData.shared.dailyBoxOffice(response: json)
                 self.boxOfficeList = self.data.boxOfficeList
-                self.navigationItem.title = Date().subtract(1.days).format(with: "yyyy년MM월dd일", timeZone: TimeZone.current)
-                print(self.data)
+                self.navigationItem.title = self.data.boxofficeType//Date().subtract(1.days).format(with: "yyyy년MM월dd일", timeZone: TimeZone.current)
             }
         }
+        
     }
 }

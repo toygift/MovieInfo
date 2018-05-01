@@ -23,6 +23,6 @@ struct BoxOfficeList {
     let salesAmt, salesInten, salesAcc, salesShare, salesChange: String
     let audiCnt, audiInten, audiAcc, audiChange: String
     let rnum, rank, rankInten: String
-    let showCnt, scrnCnt, openDt, movieCD: String
+    let showCnt, scrnCnt, openDt, movieCd: String
 }
 

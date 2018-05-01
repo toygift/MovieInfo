@@ -40,23 +40,8 @@ class BoxOfficeTableViewCell: UITableViewCell {
         self.audiCnt.text = thousandConvert(number: data.audiCnt) + "명" + "\n" + "전일대비 : (\(thousandConvert(number: data.audiInten))명)" + "증감비율 : (\(data.audiChange)%)"
         self.audiAcc.text = thousandConvert(number: data.audiAcc) + "명"
         self.scrnCnt.text = thousandConvert(number: data.scrnCnt) + "(\(thousandConvert(number: data.showCnt))번 상영)"
-        
-//        TmdbAPI.shared.getPoster(title: data.movieNm, indicator: true) { (res) -> (Void) in
-//            if let json = res {
-//                
-//                for i in json["items"].arrayValue {
-//                    print("old",dateFormatters.date(from: i["pubDate"].stringValue))
-//                    if i["title"].stringValue.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: "") == data.movieNm {
-//                        if dateFormatter.date(from: i["pubDate"].stringValue)  == newDate {
-//                            
-//                            self.poster.kf.setImage(with: URL(string: i["image"].stringValue), placeholder: nil, options: [.transition(ImageTransition.fade(0.5))], progressBlock: nil, completionHandler: nil)
-//                        }
-//                        
-//                    }
-//                }
-//            }
-//        }
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

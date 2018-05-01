@@ -19,6 +19,8 @@
 		3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */; };
 		3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0768A20984D7500391BC9 /* TmdbAPI.swift */; };
 		3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076922098811B00391BC9 /* BoxOffice.swift */; };
+		3FECCB192098853900DA7C62 /* WeekdayBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */; };
+		3FECCB1B2098854C00DA7C62 /* WeekendBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */; };
 		5DBFDE87A0121F66FF2872CF /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32C4DE524F427EC9DBFF2D /* Pods_MovieInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOffice.swift; sourceTree = "<group>"; };
 		3FC0768A20984D7500391BC9 /* TmdbAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbAPI.swift; sourceTree = "<group>"; };
 		3FC076922098811B00391BC9 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
+		3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayBoxOffice.swift; sourceTree = "<group>"; };
+		3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendBoxOffice.swift; sourceTree = "<group>"; };
 		B479C1365FA5AB7001668511 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
 		D8CE9C27198BF3309FE9A16A /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,20 +80,38 @@
 			isa = PBXGroup;
 			children = (
 				3F6A3C23208A45B90026C4F9 /* AppDelegate.swift */,
-				3FC076922098811B00391BC9 /* BoxOffice.swift */,
-				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
-				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
+				3FECCB1D20988B0600DA7C62 /* Controller */,
+				3FECCB1C20988AF800DA7C62 /* Data */,
 				3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */,
 				3F6A3C27208A45B90026C4F9 /* Main.storyboard */,
 				3F6A3C2A208A45B90026C4F9 /* Assets.xcassets */,
 				3F6A3C2C208A45B90026C4F9 /* LaunchScreen.storyboard */,
 				3F6A3C2F208A45B90026C4F9 /* Info.plist */,
+			);
+			path = MovieInfo;
+			sourceTree = "<group>";
+		};
+		3FECCB1C20988AF800DA7C62 /* Data */ = {
+			isa = PBXGroup;
+			children = (
 				3F9DAF49208A535100C480F7 /* MovieInfo.swift */,
 				3F2588CF20978892009AC275 /* KobisData.swift */,
 				3F2588CD20978554009AC275 /* KobisAPI.swift */,
 				3FC0768A20984D7500391BC9 /* TmdbAPI.swift */,
 			);
-			path = MovieInfo;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3FECCB1D20988B0600DA7C62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FC076922098811B00391BC9 /* BoxOffice.swift */,
+				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
+				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
+				3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */,
+				3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		7F39A22095F3D84553C0D9F8 /* Frameworks */ = {
@@ -246,11 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FECCB192098853900DA7C62 /* WeekdayBoxOffice.swift in Sources */,
 				3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */,
 				3F2588D020978892009AC275 /* KobisData.swift in Sources */,
 				3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */,
 				3F6A3C26208A45B90026C4F9 /* DailyBoxOffice.swift in Sources */,
 				3F9DAF4A208A535100C480F7 /* MovieInfo.swift in Sources */,
+				3FECCB1B2098854C00DA7C62 /* WeekendBoxOffice.swift in Sources */,
 				3F2588D220979562009AC275 /* BoxOfficeTableViewCell.swift in Sources */,
 				3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */,
 				3F2588CE20978554009AC275 /* KobisAPI.swift in Sources */,
@@ -399,6 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNEH2787UY;
 				INFOPLIST_FILE = MovieInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toygift.MovieInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,6 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNEH2787UY;
 				INFOPLIST_FILE = MovieInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toygift.MovieInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
