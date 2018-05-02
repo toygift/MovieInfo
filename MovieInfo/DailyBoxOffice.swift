@@ -7,22 +7,24 @@
 //
 
 import UIKit
+import XLPagerTabStrip
     
-class DailyBoxOffice: BoxOffice {
+class DailyBoxOffice: BoxOffice, IndicatorInfoProvider{
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let yesterday = Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.current)
+        let yesterday = Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent)
         
         KobisAPI.shared.boxOffice(type: "daily", weekGb: nil, date: yesterday, indicator: true) { (res) -> (Void) in
             if let json = res {
                 print(json)
                 self.data = KobisData.shared.dailyBoxOffice(response: json)
                 self.boxOfficeList = self.data.boxOfficeList
-                self.navigationItem.title = self.data.boxofficeType//Date().subtract(1.days).format(with: "yyyy년MM월dd일", timeZone: TimeZone.current)
             }
         }
-        
+    }
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "데일리")
     }
 }

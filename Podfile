@@ -11,6 +11,8 @@ target 'MovieInfo' do
  pod 'Kingfisher', '~> 4.5'
  pod 'MKProgress', '~> 1.0.6'
  pod 'Fabric'
+ pod 'XLPagerTabStrip', '~> 8.0'
+
   # Pods for MovieInfo
 
 	

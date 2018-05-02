@@ -8,6 +8,7 @@
 
 import UIKit
 import MKProgress
+import XLPagerTabStrip
 
 class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
