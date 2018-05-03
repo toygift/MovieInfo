@@ -14,6 +14,7 @@ class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
+    var texts: String!
     var data: BoxOfficeResult!
     var boxOfficeList: [BoxOfficeList] = [] {
         didSet {

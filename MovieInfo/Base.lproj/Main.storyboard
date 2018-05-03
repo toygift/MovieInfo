@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1074" y="655"/>
         </scene>
-        <!--BoxOffice-->
+        <!--BoxNavi-->
         <scene sceneID="qDP-mk-04p">
             <objects>
-                <viewControllerPlaceholder storyboardName="BoxOffice" id="i2W-d0-51d" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="BoxOffice" referencedIdentifier="BoxNavi" id="i2W-d0-51d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6rO-at-uT9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpP-fo-CIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
