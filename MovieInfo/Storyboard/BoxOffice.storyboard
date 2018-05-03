@@ -189,7 +189,7 @@
                     <navigationItem key="navigationItem" id="ali-lt-Kx4">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="JYO-hb-yMn">
                             <connections>
-                                <action selector="search" destination="7Ku-zY-tQX" id="SGZ-tI-rNE"/>
+                                <action selector="search" destination="7Ku-zY-tQX" id="yVR-ge-xX4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

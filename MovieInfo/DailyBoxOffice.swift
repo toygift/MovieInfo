@@ -8,7 +8,8 @@
 
 import UIKit
 import XLPagerTabStrip
-    
+import DateToolsSwift
+
 class DailyBoxOffice: BoxOffice, IndicatorInfoProvider{
     
     override func viewDidLoad() {

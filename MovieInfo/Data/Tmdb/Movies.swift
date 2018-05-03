@@ -9,7 +9,7 @@
 import Foundation
 
 struct MovieTopRateResult {
-    let results: [MovieTopRateList]
+    let movieTopRateList: [MovieTopRateList]
 }
 
 struct MovieTopRateList {

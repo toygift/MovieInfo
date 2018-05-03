@@ -8,54 +8,21 @@
 
 import UIKit
 import XLPagerTabStrip
+import MKProgress
 
-class BoxOfficeParent: SegmentedPagerTabStripViewController {
+class BoxOfficeParent: Parent {
     
-    @IBAction func search() {
-        let alert = UIAlertController(style: .actionSheet, title: "TextField")
-        let config: TextField.Config = { textField in
-            textField.becomeFirstResponder()
-            textField.textColor = .black
-            textField.placeholder = "Type something"
-            textField.leftViewPadding = 12
-            textField.borderWidth = 1
-            textField.cornerRadius = 8
-            textField.borderColor = UIColor.lightGray.withAlphaComponent(0.5)
-            textField.backgroundColor = nil
-            textField.keyboardAppearance = .default
-            textField.keyboardType = .default
-            textField.isSecureTextEntry = false
-            textField.returnKeyType = .done
-            textField.action { textField in
-                let text = BoxOffice()
-                text.texts = textField.text
-                print(text.texts)
-            }
-        }
-        alert.addOneTextField(configuration: config)
-        alert.addAction(title: "OK", style: .cancel)
-        alert.show()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        // change segmented style
-        settings.style.segmentedControlColor = UIColor.lightGray
-    }
-    var aaabbb: MovieTopRateResult!
     override func viewDidLoad() {
         super.viewDidLoad()
-        TmdbAPI.shared.getPoster(indicator: true) { (res) -> (Void) in
-            if let json = res {
-                print(json)
-              self.aaabbb = TmdbData.shared.movieTopRate(response: json)
-            }
-        }
+        MKProgress.config.activityIndicatorColor = .darkGray
+        MKProgress.config.hudColor = .clear
     }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let daily = UIStoryboard(name: "BoxOffice", bundle: nil).instantiateViewController(withIdentifier: "Daily")
-        let weekend = UIStoryboard(name: "BoxOffice", bundle: nil).instantiateViewController(withIdentifier: "Weekend")
-        let weekday = UIStoryboard(name: "BoxOffice", bundle: nil).instantiateViewController(withIdentifier: "Weekday")
-        let weekly = UIStoryboard(name: "BoxOffice", bundle: nil).instantiateViewController(withIdentifier: "Weekly")
+        let storyboard = UIStoryboard.storyboard(stroyboard: .BoxOffice)
+        let daily = storyboard.instantiateViewController(withIdentifier: "Daily")
+        let weekend = storyboard.instantiateViewController(withIdentifier: "Weekend")
+        let weekday = storyboard.instantiateViewController(withIdentifier: "Weekday")
+        let weekly = storyboard.instantiateViewController(withIdentifier: "Weekly")
         return [daily, weekend, weekday, weekly]
     }
 }

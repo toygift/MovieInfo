@@ -15,7 +15,7 @@ let TMDB_APIKEY = "51d168b67b261fc77c46c529e1d6b6ef"
 class TmdbAPI: NSObject {
     static let shared = TmdbAPI()
     
-    func getPoster(indicator: Bool, completion: ((_ response : JSON?) -> (Void))? = nil) {
+    func topRate(indicator: Bool, completion: ((_ response : JSON?) -> (Void))? = nil) {
         //    searchWeeklyBoxOfficeList
         let url = "https://api.themoviedb.org/3/movie/top_rated?api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
         

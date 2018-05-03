@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 import SwiftyJSON
-import DateToolsSwift
 
 class BoxOfficeTableViewCell: UITableViewCell {
     
@@ -22,9 +21,7 @@ class BoxOfficeTableViewCell: UITableViewCell {
     @IBOutlet weak var audiAcc: UILabel!
     @IBOutlet weak var scrnCnt: UILabel!
     @IBOutlet weak var poster: UIImageView!
-    
-    var posters: [JSON]!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,9 +41,8 @@ class BoxOfficeTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
+    
     func currencyConvert(currency: String) -> String {
         let currencyFormat = NumberFormatter()
         currencyFormat.locale = Locale.current
@@ -58,7 +54,4 @@ class BoxOfficeTableViewCell: UITableViewCell {
         thousandFormat.numberStyle = .decimal
         return thousandFormat.string(from: NSNumber(value:Double(number)!))!
     }
-}
-extension String {
-    
 }
