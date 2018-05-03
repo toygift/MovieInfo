@@ -41,9 +41,15 @@ class BoxOfficeParent: SegmentedPagerTabStripViewController {
         // change segmented style
         settings.style.segmentedControlColor = UIColor.lightGray
     }
-    
+    var aaabbb: MovieTopRateResult!
     override func viewDidLoad() {
         super.viewDidLoad()
+        TmdbAPI.shared.getPoster(indicator: true) { (res) -> (Void) in
+            if let json = res {
+                print(json)
+              self.aaabbb = TmdbData.shared.movieTopRate(response: json)
+            }
+        }
     }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let daily = UIStoryboard(name: "BoxOffice", bundle: nil).instantiateViewController(withIdentifier: "Daily")

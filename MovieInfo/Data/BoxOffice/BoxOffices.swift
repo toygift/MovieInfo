@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct MovieInfo {
-    let boxOfficeResult: BoxOfficeResult
-}
+//struct MovieInfo {
+//    let boxOfficeResult: BoxOfficeResult
+//}
 
 struct BoxOfficeResult {
     let boxOfficeList: [BoxOfficeList]

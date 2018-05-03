@@ -18,7 +18,6 @@ class DailyBoxOffice: BoxOffice, IndicatorInfoProvider{
         
         KobisAPI.shared.boxOffice(type: "daily", weekGb: nil, date: yesterday, indicator: true) { (res) -> (Void) in
             if let json = res {
-                print(json)
                 self.data = KobisData.shared.dailyBoxOffice(response: json)
                 self.boxOfficeList = self.data.boxOfficeList
             }
