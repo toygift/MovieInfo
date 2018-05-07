@@ -15,7 +15,9 @@ class WeekendBoxOffice: BoxOffice, IndicatorInfoProvider {
         super.viewDidLoad()
         
         let today = Date().subtract(7.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent)
-        KobisAPI.shared.boxOffice(type: "weekly", weekGb: "1", date: today, indicator: true) { (res) -> (Void) in
+        let url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=\(KOBIS_APIKEY)&targetDt=\(today)&weekGb=\(1)"
+        
+        KobisAPI.shared.boxOffice(url: url, indicator: true) { (res) -> (Void) in
             if let json = res {
                 self.data = KobisData.shared.weeklyBoxOffice(response: json)
                 self.boxOfficeList = self.data.boxOfficeList

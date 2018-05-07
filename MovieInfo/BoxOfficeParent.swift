@@ -11,11 +11,11 @@ import XLPagerTabStrip
 import MKProgress
 
 class BoxOfficeParent: Parent {
-    
+
     override func viewDidLoad() {
-        super.viewDidLoad()
         MKProgress.config.activityIndicatorColor = .darkGray
         MKProgress.config.hudColor = .clear
+        super.viewDidLoad()
     }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let storyboard = UIStoryboard.storyboard(stroyboard: .BoxOffice)

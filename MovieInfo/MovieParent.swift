@@ -13,14 +13,18 @@ import MKProgress
 class MovieParent: Parent {
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         MKProgress.config.activityIndicatorColor = .darkGray
         MKProgress.config.hudColor = .clear
+        super.viewDidLoad()
         
     }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let storyboard = UIStoryboard.storyboard(stroyboard: .Movie)
-        let topRate = storyboard.instantiateViewController(withIdentifier: "TopRate")
-        return [topRate]
+        let topRate = storyboard.instantiateViewController(withIdentifier: "Toprate")
+        let popular = storyboard.instantiateViewController(withIdentifier: "Popular")
+        let nowPlaying = storyboard.instantiateViewController(withIdentifier: "Nowplaying")
+        let upComing = storyboard.instantiateViewController(withIdentifier: "Upcoming")
+        let latest = storyboard.instantiateViewController(withIdentifier: "Latest")
+        return [topRate, popular, nowPlaying, upComing, latest]
     }
 }
