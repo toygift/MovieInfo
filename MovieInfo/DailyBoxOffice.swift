@@ -23,6 +23,15 @@ class DailyBoxOffice: BoxOffice, IndicatorInfoProvider {
                 self.boxOfficeList = self.data.boxOfficeList
             }
         }
+        ARequset().requestTV { (response) in
+            print("가나다라마바사",response)
+        }
+//        ARequset().request { [weak self] response in
+//            print("sfsfsdsdf")
+//            if let a = response.result.value { // a is A, not Any
+//                print("AAaksdjflksdjlfkjsdlkfjlj",a)
+//            }
+//        }
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "데일리")

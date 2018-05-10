@@ -474,11 +474,11 @@
             </objects>
             <point key="canvasLocation" x="7714.3999999999996" y="153.69458128078819"/>
         </scene>
-        <!--Item-->
+        <!--영화-->
         <scene sceneID="1cD-Y7-Q9U">
             <objects>
                 <navigationController storyboardIdentifier="MovieNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nHS-sE-yhv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="E7R-cS-lF7"/>
+                    <tabBarItem key="tabBarItem" title="영화" id="E7R-cS-lF7"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XQ1-Gj-wZC">

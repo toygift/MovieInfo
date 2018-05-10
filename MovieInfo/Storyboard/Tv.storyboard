@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Parent-->
+        <scene sceneID="3Uv-hB-hXz">
+            <objects>
+                <viewController id="ota-fg-hEw" customClass="MovieParent" customModule="MovieInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ax-HC-of9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShM-bW-UKF">
+                                <rect key="frame" x="0.0" y="147" width="375" height="665"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XHp-Ta-Xp0" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Uyo-lf-YDV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MY1-4G-VeR">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ShM-bW-UKF" firstAttribute="top" secondItem="XHp-Ta-Xp0" secondAttribute="bottom" constant="-5" id="0TT-hg-jQL"/>
+                            <constraint firstItem="ShM-bW-UKF" firstAttribute="leading" secondItem="m0T-nH-w8p" secondAttribute="leading" id="ADU-8h-AJf"/>
+                            <constraint firstAttribute="bottom" secondItem="ShM-bW-UKF" secondAttribute="bottom" id="BHY-Er-TW0"/>
+                            <constraint firstItem="XHp-Ta-Xp0" firstAttribute="leading" secondItem="5ax-HC-of9" secondAttribute="leading" id="KxI-XR-xF0"/>
+                            <constraint firstItem="m0T-nH-w8p" firstAttribute="trailing" secondItem="XHp-Ta-Xp0" secondAttribute="trailing" id="cq3-Op-CWr"/>
+                            <constraint firstItem="ShM-bW-UKF" firstAttribute="trailing" secondItem="m0T-nH-w8p" secondAttribute="trailing" id="ngX-lL-YJr"/>
+                            <constraint firstItem="XHp-Ta-Xp0" firstAttribute="top" secondItem="m0T-nH-w8p" secondAttribute="top" id="sH1-ce-Zhd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m0T-nH-w8p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="why-V0-iZ1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="UY2-WC-MCM">
+                            <connections>
+                                <action selector="search" destination="ota-fg-hEw" id="Od5-Nx-szx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="XHp-Ta-Xp0" id="qiC-Sx-eRD"/>
+                        <outlet property="containerView" destination="ShM-bW-UKF" id="M68-SZ-eZg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4A-jd-SkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4610.3999999999996" y="166.99507389162562"/>
+        </scene>
+        <!--TV-->
+        <scene sceneID="Rfl-pm-47R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1A-vB-jaI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV" id="UY6-qP-z22"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ndT-np-u3I">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ota-fg-hEw" kind="relationship" relationship="rootViewController" id="T40-D6-ho5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bza-r2-LRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3668" y="166.99507389162562"/>
+        </scene>
+    </scenes>
+</document>

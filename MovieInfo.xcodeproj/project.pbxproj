@@ -25,6 +25,9 @@
 		3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076922098811B00391BC9 /* BoxOffice.swift */; };
 		3FECCB192098853900DA7C62 /* WeekdayBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */; };
 		3FECCB1B2098854C00DA7C62 /* WeekendBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */; };
+		3FF88F4020A46EA90026DDD6 /* Tv.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF88F3F20A46EA90026DDD6 /* Tv.storyboard */; };
+		3FF88F4220A470200026DDD6 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF88F4120A470200026DDD6 /* TV.swift */; };
+		3FF88F4520A471060026DDD6 /* TvData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF88F4420A471060026DDD6 /* TvData.swift */; };
 		5DBFDE87A0121F66FF2872CF /* Pods_MovieInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32C4DE524F427EC9DBFF2D /* Pods_MovieInfo.framework */; };
 		FFC754E0209B5EB8001D4DE2 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC754DF209B5EB7001D4DE2 /* Movie.storyboard */; };
 		FFC754E3209B5F4E001D4DE2 /* MovieParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC754E2209B5F4E001D4DE2 /* MovieParent.swift */; };
@@ -114,6 +117,9 @@
 		3FC076922098811B00391BC9 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
 		3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayBoxOffice.swift; sourceTree = "<group>"; };
 		3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendBoxOffice.swift; sourceTree = "<group>"; };
+		3FF88F3F20A46EA90026DDD6 /* Tv.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tv.storyboard; sourceTree = "<group>"; };
+		3FF88F4120A470200026DDD6 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
+		3FF88F4420A471060026DDD6 /* TvData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvData.swift; sourceTree = "<group>"; };
 		B479C1365FA5AB7001668511 /* Pods-MovieInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.release.xcconfig"; sourceTree = "<group>"; };
 		D8CE9C27198BF3309FE9A16A /* Pods-MovieInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInfo/Pods-MovieInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		FFC754DF209B5EB7001D4DE2 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				FFC754E4209B5FF9001D4DE2 /* Parent.swift */,
 				FFDDBBBC209B323E00954176 /* BoxOffice */,
 				FFDDBBBD209B324600954176 /* Tmdb */,
+				3FF88F4320A470270026DDD6 /* TV */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -246,6 +253,15 @@
 				FFC754E1209B5F31001D4DE2 /* Movie */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		3FF88F4320A470270026DDD6 /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				3FF88F4120A470200026DDD6 /* TV.swift */,
+				3FF88F4420A471060026DDD6 /* TvData.swift */,
+			);
+			path = TV;
 			sourceTree = "<group>";
 		};
 		7F39A22095F3D84553C0D9F8 /* Frameworks */ = {
@@ -285,6 +301,7 @@
 				3F6A3C27208A45B90026C4F9 /* Main.storyboard */,
 				FFDB09F1209A05B000CB50EE /* BoxOffice.storyboard */,
 				FFC754DF209B5EB7001D4DE2 /* Movie.storyboard */,
+				3FF88F3F20A46EA90026DDD6 /* Tv.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -673,6 +690,7 @@
 				FFDB0A59209A994000CB50EE /* Countries.bundle in Resources */,
 				3F6A3C2E208A45B90026C4F9 /* LaunchScreen.storyboard in Resources */,
 				3F6A3C2B208A45B90026C4F9 /* Assets.xcassets in Resources */,
+				3FF88F4020A46EA90026DDD6 /* Tv.storyboard in Resources */,
 				3F6A3C29208A45B90026C4F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +752,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDB0A77209A994000CB50EE /* SegmentedControl.swift in Sources */,
+				3FF88F4520A471060026DDD6 /* TvData.swift in Sources */,
 				FFDB0A48209A994000CB50EE /* UIImageView+Extensions.swift in Sources */,
 				3FECCB192098853900DA7C62 /* WeekdayBoxOffice.swift in Sources */,
 				FFDB0A6C209A994000CB50EE /* Contact.swift in Sources */,
@@ -792,6 +811,7 @@
 				FFDB0A60209A994000CB50EE /* TwoTextFieldsViewController.swift in Sources */,
 				3F5E9CB220A03FB300341952 /* NowPlaying.swift in Sources */,
 				FFDB0A5E209A994000CB50EE /* CurrencyCell.swift in Sources */,
+				3FF88F4220A470200026DDD6 /* TV.swift in Sources */,
 				FFDB0A6F209A994000CB50EE /* DatePickerViewController.swift in Sources */,
 				FFDB0A47209A994000CB50EE /* UISegmentedControl+Extensions.swift in Sources */,
 				FFDB0A4F209A994000CB50EE /* UIImage+Extensions.swift in Sources */,
