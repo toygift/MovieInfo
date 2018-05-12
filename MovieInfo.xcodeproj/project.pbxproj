@@ -212,6 +212,33 @@
 			path = Tv;
 			sourceTree = "<group>";
 		};
+		3F0C23C020A6A1D9004C05D7 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				FFC754E2209B5F4E001D4DE2 /* MovieParent.swift */,
+				FFC754E6209B6146001D4DE2 /* Movies.swift */,
+				FFC754EB209B66C0001D4DE2 /* TopRateMovie.swift */,
+				3F5E9CAF20A03D6100341952 /* Popular.swift */,
+				3F5E9CB120A03FB300341952 /* NowPlaying.swift */,
+				3F5E9CB320A03FCF00341952 /* UpComing.swift */,
+				3F5E9CB520A03FF600341952 /* Latest.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		3F0C23C120A6A201004C05D7 /* BoxOffice */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB09EF2099EC1700CB50EE /* BoxOfficeParent.swift */,
+				3FC076922098811B00391BC9 /* BoxOffice.swift */,
+				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
+				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
+				3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */,
+				3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */,
+			);
+			path = BoxOffice;
+			sourceTree = "<group>";
+		};
 		3F6A3C17208A45B90026C4F9 = {
 			isa = PBXGroup;
 			children = (
@@ -263,8 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				3F0C23BE20A5CCF2004C05D7 /* Tv */,
-				FFDB09EE2099EBB600CB50EE /* BoxOffice */,
-				FFC754E1209B5F31001D4DE2 /* Movie */,
+				3F0C23C120A6A201004C05D7 /* BoxOffice */,
+				3F0C23C020A6A1D9004C05D7 /* Movie */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -295,20 +322,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FFC754E1209B5F31001D4DE2 /* Movie */ = {
-			isa = PBXGroup;
-			children = (
-				FFC754E2209B5F4E001D4DE2 /* MovieParent.swift */,
-				FFC754E6209B6146001D4DE2 /* Movies.swift */,
-				FFC754EB209B66C0001D4DE2 /* TopRateMovie.swift */,
-				3F5E9CAF20A03D6100341952 /* Popular.swift */,
-				3F5E9CB120A03FB300341952 /* NowPlaying.swift */,
-				3F5E9CB320A03FCF00341952 /* UpComing.swift */,
-				3F5E9CB520A03FF600341952 /* Latest.swift */,
-			);
-			name = Movie;
-			sourceTree = "<group>";
-		};
 		FFC754EA209B6364001D4DE2 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,19 +331,6 @@
 				3FF88F3F20A46EA90026DDD6 /* Tv.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		FFDB09EE2099EBB600CB50EE /* BoxOffice */ = {
-			isa = PBXGroup;
-			children = (
-				FFDB09EF2099EC1700CB50EE /* BoxOfficeParent.swift */,
-				3FC076922098811B00391BC9 /* BoxOffice.swift */,
-				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
-				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
-				3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */,
-				3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */,
-			);
-			name = BoxOffice;
 			sourceTree = "<group>";
 		};
 		FFDB09F5209A994000CB50EE /* Source */ = {
