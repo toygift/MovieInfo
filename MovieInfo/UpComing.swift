@@ -9,19 +9,16 @@
 import UIKit
 import XLPagerTabStrip
 
-class UpComing: Movie, IndicatorInfoProvider {
+class UpComing: Movies, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=\(TMDB_APIKEY)&language=ko-KR"
-        TmdbAPI.shared.tmdb(url: url, indicator: true) { (res) -> (Void) in
-            if let json = res {
-                print(json)
-                self.data = TmdbData.shared.movieTopRate(response: json)
-                self.movieTopRateList = self.data.movieTopRateList
+        
+        Movie_UpComingRequest().requestTmdb { (response) in
+            if let result = response.result.value {
+                self.movies = result
             }
         }
-        
     }
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

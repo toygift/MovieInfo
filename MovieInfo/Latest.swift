@@ -9,16 +9,15 @@
 import UIKit
 import XLPagerTabStrip
 
-class Latest: Movie, IndicatorInfoProvider {
+class Latest: Movies, IndicatorInfoProvider {
 
+    var data: Movie_LatestRequest.T!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "https://api.themoviedb.org/3/movie/latest?api_key=\(TMDB_APIKEY)&language=ko-KR"
-        TmdbAPI.shared.tmdb(url: url, indicator: true) { (res) -> (Void) in
-            if let json = res {
-                print("최신",json)
-                self.data = TmdbData.shared.movieTopRate(response: json)
-                self.movieTopRateList = self.data.movieTopRateList
+        
+        Movie_LatestRequest().requestTmdb { (response) in
+            if let result = response.result.value {
+                self.movies = result
             }
         }
     }

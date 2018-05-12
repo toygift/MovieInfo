@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 struct Tv: Codable {
     let page, totalResults, totalPages: Int
@@ -51,52 +50,4 @@ struct TvResult: Codable {
     }
 }
 
-// MARK: - Alamofire response handlers
 
-extension DataRequest {
-    fileprivate func decodableResponseSerializer<T: Decodable>() -> DataResponseSerializer<T> {
-        return DataResponseSerializer { _, response, data, error in
-            guard error == nil else { return .failure(error!) }
-            
-            guard let data = data else {
-                return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
-            }
-            
-            return Result { try JSONDecoder().decode(T.self, from: data) }
-        }
-    }
-    
-    @discardableResult
-    fileprivate func responseDecodable<T: Decodable>(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
-        return response(queue: queue, responseSerializer: decodableResponseSerializer(), completionHandler: completionHandler)
-    }
-    
-//    @discardableResult
-//    func responseTv(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<Tv>) -> Void) -> Self {
-//        return responseDecodable(queue: queue, completionHandler: completionHandler)
-//    }
-}
-protocol HJrequest {
-    var router: String { get }
-    var api: String { get }
-    
-    associatedtype T: Decodable
-}
-extension HJrequest {
-    var api: String { return "tv/airing_today" }
-    
-    var domain: String {
-        return "https://api.themoviedb.org/3"
-    }
-    
-    // T is used in DataResponse<T>
-    func requestTV(completionHandler: @escaping (DataResponse<T>) -> Void) {
-        let url = "\(domain)/\(api)/\(router)"
-        Alamofire.request(url).responseDecodable(completionHandler: completionHandler)
-    }
-}
-
-struct ARequset: HJrequest {
-    let router = "?api_key=51d168b67b261fc77c46c529e1d6b6ef&language=ko-KR&page=1"
-    typealias T = Tv
-}

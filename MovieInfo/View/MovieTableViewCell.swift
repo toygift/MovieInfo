@@ -21,9 +21,8 @@ class MovieTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setData(data: MovieTopRateList) {
-        let posterURL = "https://image.tmdb.org/t/p/original"
-        self.poster.kf.setImage(with: URL(string: posterURL + data.posterPath))
+    func setData(data: MovieList) {
+        self.poster.kf.setImage(with: URL(string: TMDB_POSTER + data.posterPath))
         self.title.text = data.title
         self.releaseDate.text = data.releaseDate
         self.voteRate.text = "\(data.voteAverage)"

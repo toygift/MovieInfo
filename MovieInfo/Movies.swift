@@ -8,11 +8,10 @@
 
 import UIKit
 
-class Movie: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Movies: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView:UITableView!
-    var data: MovieTopRateResult!
-    var movieTopRateList: [MovieTopRateList] = [] {
+    var movies: Movie! {
         didSet {
             self.tableView.delegate = self
             self.tableView.dataSource = self
@@ -21,21 +20,21 @@ class Movie: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
     }
 }
 
-extension Movie {
+extension Movies {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movieTopRateList.count
+        return self.movies.movielist.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Movie", for: indexPath) as? MovieTableViewCell
-        cell?.setData(data: self.movieTopRateList[indexPath.row])
+        cell?.setData(data: self.movies.movielist[indexPath.row])
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+        return UITableViewAutomaticDimension
     }
 }

@@ -9,14 +9,33 @@
 import Foundation
 import SwiftyJSON
 
-class TmdbData: NSObject {
-    static let shared = TmdbData()
+struct Movie_TopRateRequest: TMDBRequest {
+    typealias T = Movie
     
-    func movieTopRate(response json: JSON) -> MovieTopRateResult {
-        let topRate = MovieTopRateResult(movieTopRateList: json["results"].arrayValue.map({ (json) -> MovieTopRateList in
-            let movieTopRate = MovieTopRateList(posterPath: json["poster_path"].stringValue, backdropPath: json["backdrop_path"].stringValue, voteCount: json["vote_count"].intValue, overview: json["overview"].stringValue, originalTitle: json["original_title"].stringValue, voteAverage: json["vote_average"].doubleValue, popularity: json["popularity"].doubleValue, releaseDate: json["release_date"].stringValue, title: json["title"].stringValue, adult: json["adult"].boolValue)
-            return movieTopRate
-        }))
-        return topRate
-    }
+    let api = "movie/top_rated"
+    let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
+}
+struct Movie_PopularRequest: TMDBRequest {
+    typealias T = Movie
+    
+    let api = "movie/popular"
+    let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
+}
+struct Movie_NowPlayingRequest: TMDBRequest {
+    typealias T = Movie
+    
+    let api = "movie/now_playing"
+    let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
+}
+struct Movie_UpComingRequest: TMDBRequest {
+    typealias T = Movie
+    
+    let api = "movie/upcoming"
+    let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
+}
+struct Movie_LatestRequest: TMDBRequest {
+    typealias T = Movie
+    
+    let api = "movie/latest"
+    let router = "api_key=\(TMDB_APIKEY)&language=ko-KR"
 }
