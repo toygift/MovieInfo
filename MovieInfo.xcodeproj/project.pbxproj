@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3F0C23BB20A5C99A004C05D7 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23BA20A5C99A004C05D7 /* APIRequest.swift */; };
 		3F0C23BD20A5CCE4004C05D7 /* AiringToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23BC20A5CCE4004C05D7 /* AiringToday.swift */; };
+		3F0C23C320A6A50F004C05D7 /* TvParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C220A6A50F004C05D7 /* TvParent.swift */; };
+		3F0C23C520A6A65A004C05D7 /* TvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C420A6A65A004C05D7 /* TvTableViewCell.swift */; };
+		3F0C23C720A6AA6E004C05D7 /* Tvs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C620A6AA6E004C05D7 /* Tvs.swift */; };
 		3F2588CE20978554009AC275 /* KobisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588CD20978554009AC275 /* KobisAPI.swift */; };
 		3F2588D020978892009AC275 /* KobisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588CF20978892009AC275 /* KobisData.swift */; };
 		3F2588D220979562009AC275 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */; };
@@ -21,10 +24,10 @@
 		3F6A3C29208A45B90026C4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A3C27208A45B90026C4F9 /* Main.storyboard */; };
 		3F6A3C2B208A45B90026C4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A3C2A208A45B90026C4F9 /* Assets.xcassets */; };
 		3F6A3C2E208A45B90026C4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A3C2C208A45B90026C4F9 /* LaunchScreen.storyboard */; };
-		3F9DAF4A208A535100C480F7 /* BoxOffices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DAF49208A535100C480F7 /* BoxOffices.swift */; };
+		3F9DAF4A208A535100C480F7 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DAF49208A535100C480F7 /* BoxOffice.swift */; };
 		3FC076892098237300391BC9 /* WeeklyBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */; };
 		3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0768A20984D7500391BC9 /* TmdbAPI.swift */; };
-		3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076922098811B00391BC9 /* BoxOffice.swift */; };
+		3FC076932098811B00391BC9 /* BoxOffices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC076922098811B00391BC9 /* BoxOffices.swift */; };
 		3FECCB192098853900DA7C62 /* WeekdayBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */; };
 		3FECCB1B2098854C00DA7C62 /* WeekendBoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */; };
 		3FF88F4020A46EA90026DDD6 /* Tv.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF88F3F20A46EA90026DDD6 /* Tv.storyboard */; };
@@ -101,6 +104,9 @@
 		0C32C4DE524F427EC9DBFF2D /* Pods_MovieInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0C23BA20A5C99A004C05D7 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		3F0C23BC20A5CCE4004C05D7 /* AiringToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiringToday.swift; sourceTree = "<group>"; };
+		3F0C23C220A6A50F004C05D7 /* TvParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvParent.swift; sourceTree = "<group>"; };
+		3F0C23C420A6A65A004C05D7 /* TvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvTableViewCell.swift; sourceTree = "<group>"; };
+		3F0C23C620A6AA6E004C05D7 /* Tvs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tvs.swift; sourceTree = "<group>"; };
 		3F2588CD20978554009AC275 /* KobisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KobisAPI.swift; sourceTree = "<group>"; };
 		3F2588CF20978892009AC275 /* KobisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KobisData.swift; sourceTree = "<group>"; };
 		3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,10 +121,10 @@
 		3F6A3C2A208A45B90026C4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F6A3C2D208A45B90026C4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F6A3C2F208A45B90026C4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F9DAF49208A535100C480F7 /* BoxOffices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffices.swift; sourceTree = "<group>"; };
+		3F9DAF49208A535100C480F7 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
 		3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOffice.swift; sourceTree = "<group>"; };
 		3FC0768A20984D7500391BC9 /* TmdbAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbAPI.swift; sourceTree = "<group>"; };
-		3FC076922098811B00391BC9 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
+		3FC076922098811B00391BC9 /* BoxOffices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffices.swift; sourceTree = "<group>"; };
 		3FECCB182098853900DA7C62 /* WeekdayBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayBoxOffice.swift; sourceTree = "<group>"; };
 		3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendBoxOffice.swift; sourceTree = "<group>"; };
 		3FF88F3F20A46EA90026DDD6 /* Tv.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tv.storyboard; sourceTree = "<group>"; };
@@ -207,6 +213,8 @@
 		3F0C23BE20A5CCF2004C05D7 /* Tv */ = {
 			isa = PBXGroup;
 			children = (
+				3F0C23C220A6A50F004C05D7 /* TvParent.swift */,
+				3F0C23C620A6AA6E004C05D7 /* Tvs.swift */,
 				3F0C23BC20A5CCE4004C05D7 /* AiringToday.swift */,
 			);
 			path = Tv;
@@ -230,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDB09EF2099EC1700CB50EE /* BoxOfficeParent.swift */,
-				3FC076922098811B00391BC9 /* BoxOffice.swift */,
+				3FC076922098811B00391BC9 /* BoxOffices.swift */,
 				3F6A3C25208A45B90026C4F9 /* DailyBoxOffice.swift */,
 				3FC076882098237300391BC9 /* WeeklyBoxOffice.swift */,
 				3FECCB1A2098854C00DA7C62 /* WeekendBoxOffice.swift */,
@@ -614,6 +622,7 @@
 			children = (
 				3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */,
 				FFC754E8209B62D0001D4DE2 /* MovieTableViewCell.swift */,
+				3F0C23C420A6A65A004C05D7 /* TvTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -621,7 +630,7 @@
 		FFDDBBBC209B323E00954176 /* BoxOffice */ = {
 			isa = PBXGroup;
 			children = (
-				3F9DAF49208A535100C480F7 /* BoxOffices.swift */,
+				3F9DAF49208A535100C480F7 /* BoxOffice.swift */,
 				3F2588CF20978892009AC275 /* KobisData.swift */,
 				3F2588CD20978554009AC275 /* KobisAPI.swift */,
 			);
@@ -788,7 +797,7 @@
 				FFDB09F02099EC1700CB50EE /* BoxOfficeParent.swift in Sources */,
 				FFDB0A6B209A994000CB50EE /* Contacts.swift in Sources */,
 				FFDB0A5A209A994000CB50EE /* LocaleStore.swift in Sources */,
-				3FC076932098811B00391BC9 /* BoxOffice.swift in Sources */,
+				3FC076932098811B00391BC9 /* BoxOffices.swift in Sources */,
 				FFDB0A4A209A994000CB50EE /* UIView+Extensions.swift in Sources */,
 				FFDB0A6D209A994000CB50EE /* ContactCell.swift in Sources */,
 				FFDB0A68209A994000CB50EE /* Address.swift in Sources */,
@@ -799,6 +808,7 @@
 				FFDB0A50209A994000CB50EE /* UISearchBar+Extensions.swift in Sources */,
 				FFC754E9209B62D0001D4DE2 /* MovieTableViewCell.swift in Sources */,
 				3F5E9CB620A03FF600341952 /* Latest.swift in Sources */,
+				3F0C23C720A6AA6E004C05D7 /* Tvs.swift in Sources */,
 				3F6A3C26208A45B90026C4F9 /* DailyBoxOffice.swift in Sources */,
 				FFDB0A73209A994000CB50EE /* TelegramPickerViewController.swift in Sources */,
 				FFDB0A64209A994000CB50EE /* LocationSearchResultsViewController.swift in Sources */,
@@ -808,7 +818,7 @@
 				FFDB0A6E209A994000CB50EE /* ColorPickerViewController.swift in Sources */,
 				FFDB0A67209A994000CB50EE /* Location.swift in Sources */,
 				FFDB0A7A209A994000CB50EE /* Button.swift in Sources */,
-				3F9DAF4A208A535100C480F7 /* BoxOffices.swift in Sources */,
+				3F9DAF4A208A535100C480F7 /* BoxOffice.swift in Sources */,
 				3FECCB1B2098854C00DA7C62 /* WeekendBoxOffice.swift in Sources */,
 				FFC754E3209B5F4E001D4DE2 /* MovieParent.swift in Sources */,
 				FFDB0A5B209A994000CB50EE /* LocaleInfo.swift in Sources */,
@@ -821,6 +831,7 @@
 				FFDB0A56209A994000CB50EE /* UITextField+Extensions.swift in Sources */,
 				FFDB0A70209A994000CB50EE /* ImagePickerViewController.swift in Sources */,
 				FFDB0A51209A994000CB50EE /* UIApplication+Extensions.swift in Sources */,
+				3F0C23C320A6A50F004C05D7 /* TvParent.swift in Sources */,
 				FFDB0A46209A994000CB50EE /* Array+Extensions.swift in Sources */,
 				FFDB0A60209A994000CB50EE /* TwoTextFieldsViewController.swift in Sources */,
 				3F5E9CB220A03FB300341952 /* NowPlaying.swift in Sources */,
@@ -829,6 +840,7 @@
 				3FF88F4220A470200026DDD6 /* TV.swift in Sources */,
 				FFDB0A6F209A994000CB50EE /* DatePickerViewController.swift in Sources */,
 				FFDB0A47209A994000CB50EE /* UISegmentedControl+Extensions.swift in Sources */,
+				3F0C23C520A6A65A004C05D7 /* TvTableViewCell.swift in Sources */,
 				FFDB0A4F209A994000CB50EE /* UIImage+Extensions.swift in Sources */,
 				FFDB0A69209A994000CB50EE /* PickerViewViewController.swift in Sources */,
 				FFDB0A4C209A994000CB50EE /* String+Extensions.swift in Sources */,

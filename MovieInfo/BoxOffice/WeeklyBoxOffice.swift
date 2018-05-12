@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 
 /// 주간박스오피스(월~일)
-class WeeklyBoxOffice: BoxOffice,IndicatorInfoProvider {
+class WeeklyBoxOffice: BoxOffices,IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()

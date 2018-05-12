@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import MKProgress
 
 class Parent: ButtonBarPagerTabStripViewController {
 
@@ -27,7 +28,7 @@ class Parent: ButtonBarPagerTabStripViewController {
             textField.isSecureTextEntry = false
             textField.returnKeyType = .done
             textField.action { textField in
-                let text = BoxOffice()
+                let text = BoxOffices()
                 text.texts = textField.text
                 print(text.texts)
             }
@@ -35,6 +36,8 @@ class Parent: ButtonBarPagerTabStripViewController {
         alert.addOneTextField(configuration: config)
         alert.addAction(title: "OK", style: .cancel)
         alert.show()
+        MKProgress.config.activityIndicatorColor = .darkGray
+        MKProgress.config.hudColor = .clear
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

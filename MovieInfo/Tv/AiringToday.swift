@@ -7,37 +7,19 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class AiringToday: UIViewController {
-
-    var today: TV_AiringTodayRequest.T!
+class AiringToday: Tvs, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         TV_AiringTodayRequest().requestTmdb { (response) in
-            if let todayResponse = response.result.value {
-                self.today = todayResponse
+            if let result = response.result.value {
+                self.tvs = result
             }
         }
-        print("가가가가가가",self.today)
-        
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "airing")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 import DateToolsSwift
 
-class DailyBoxOffice: BoxOffice, IndicatorInfoProvider {
+class DailyBoxOffice: BoxOffices, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class DailyBoxOffice: BoxOffice, IndicatorInfoProvider {
                 self.boxOfficeList = self.data.boxOfficeList
             }
         }
-        
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "데일리")

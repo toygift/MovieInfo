@@ -1,21 +1,17 @@
 //
-//  BoxOffice.swift
+//  Tvs.swift
 //  MovieInfo
 //
-//  Created by Jaeseong on 2018. 5. 1..
+//  Created by Jaeseong on 2018. 5. 12..
 //  Copyright © 2018년 Jaeseong. All rights reserved.
 //
 
 import UIKit
-import XLPagerTabStrip
 
-class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Tvs: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-    @IBOutlet weak var tableView: UITableView!
-    var texts: String!
-    var data: BoxOfficeResult!
-    var boxOfficeList: [BoxOfficeList] = [] {
+    @IBOutlet var tableView: UITableView!
+    var tvs: Tv! {
         didSet {
             self.tableView.delegate = self
             self.tableView.dataSource = self
@@ -24,20 +20,22 @@ class BoxOffice: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
     }
 }
 
-extension BoxOffice {
+extension Tvs {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.boxOfficeList.count
+        return self.tvs.results.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOffice", for: indexPath) as? BoxOfficeTableViewCell
-        cell?.setData(data: self.boxOfficeList[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Tv", for: indexPath) as? TvTableViewCell
+        cell?.setData(data: self.tvs.results[indexPath.row])
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
+        return UITableViewAutomaticDimension
     }
 }
+

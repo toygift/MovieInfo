@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import MKProgress
 
 protocol TMDBRequest {
     var api: String { get }
@@ -21,6 +22,8 @@ extension TMDBRequest {
     // T is used in DataResponse<T>
     func requestTmdb(completionHandler: @escaping (DataResponse<T>) -> Void) {
         let url = "\(domain)/\(api)?\(router)"
+        MKProgress.show()
+        print("url",url)
         Alamofire.request(url).responseDecodable(completionHandler: completionHandler)
     }
 }
@@ -41,6 +44,7 @@ extension DataRequest {
     
     @discardableResult
     fileprivate func responseDecodable<T: Decodable>(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
+        MKProgress.hide()
         return response(queue: queue, responseSerializer: decodableResponseSerializer(), completionHandler: completionHandler)
     }
 }

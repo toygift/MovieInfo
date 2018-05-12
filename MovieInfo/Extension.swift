@@ -13,6 +13,7 @@ extension UIStoryboard {
         case Main
         case BoxOffice
         case Movie
+        case Tv
         
         var storyName: String {
             return rawValue

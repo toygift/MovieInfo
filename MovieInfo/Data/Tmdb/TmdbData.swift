@@ -7,7 +7,9 @@
 //
 
 import Foundation
-import SwiftyJSON
+
+let TMDB_APIKEY = "51d168b67b261fc77c46c529e1d6b6ef"
+let TMDB_POSTER = "https://image.tmdb.org/t/p/original"
 
 struct Movie_TopRateRequest: TMDBRequest {
     typealias T = Movie

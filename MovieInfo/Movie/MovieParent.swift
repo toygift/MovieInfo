@@ -13,8 +13,6 @@ import MKProgress
 class MovieParent: Parent {
     
     override func viewDidLoad() {
-        MKProgress.config.activityIndicatorColor = .darkGray
-        MKProgress.config.hudColor = .clear
         super.viewDidLoad()
         
     }

@@ -8,14 +8,13 @@
 
 import Foundation
 
-
 struct TV_AiringTodayRequest: TMDBRequest {
     typealias T = Tv
-
+    
     let api = "tv/airing_today"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
-    
 }
+
 struct TV_OnTheAirRequest: TMDBRequest {
     typealias T = Tv
     
