@@ -24,12 +24,12 @@ struct TV_OnTheAirRequest: TMDBRequest {
 struct TV_PopularRequest: TMDBRequest {
     typealias T = Tv
     
-    let api = "popular"
+    let api = "tv/popular"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
 }
 struct TV_TopRateRequest: TMDBRequest {
     typealias T = Tv
     
-    let api = "top_rated"
+    let api = "tv/top_rated"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
 }

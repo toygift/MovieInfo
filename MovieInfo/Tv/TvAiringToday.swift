@@ -8,18 +8,20 @@
 
 import UIKit
 import XLPagerTabStrip
+import MKProgress
 
-class AiringToday: Tvs, IndicatorInfoProvider {
+class TvAiringToday: Tvs, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         TV_AiringTodayRequest().requestTmdb { (response) in
             if let result = response.result.value {
+                MKProgress.hide()
                 self.tvs = result
             }
         }
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "airing")
+        return IndicatorInfo(title: "AIRING")
     }
 }

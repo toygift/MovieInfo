@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F0C23BB20A5C99A004C05D7 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23BA20A5C99A004C05D7 /* APIRequest.swift */; };
-		3F0C23BD20A5CCE4004C05D7 /* AiringToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23BC20A5CCE4004C05D7 /* AiringToday.swift */; };
 		3F0C23C320A6A50F004C05D7 /* TvParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C220A6A50F004C05D7 /* TvParent.swift */; };
 		3F0C23C520A6A65A004C05D7 /* TvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C420A6A65A004C05D7 /* TvTableViewCell.swift */; };
 		3F0C23C720A6AA6E004C05D7 /* Tvs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C620A6AA6E004C05D7 /* Tvs.swift */; };
+		3F0C23C920A81C1B004C05D7 /* TvOn_The_air.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23C820A81C1B004C05D7 /* TvOn_The_air.swift */; };
+		3F0C23CB20A81C41004C05D7 /* TvPopular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23CA20A81C41004C05D7 /* TvPopular.swift */; };
+		3F0C23CD20A81C4B004C05D7 /* TvTopRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23CC20A81C4B004C05D7 /* TvTopRate.swift */; };
+		3F0C23CF20A81CD0004C05D7 /* TvAiringToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C23CE20A81CD0004C05D7 /* TvAiringToday.swift */; };
 		3F2588CE20978554009AC275 /* KobisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588CD20978554009AC275 /* KobisAPI.swift */; };
 		3F2588D020978892009AC275 /* KobisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588CF20978892009AC275 /* KobisData.swift */; };
 		3F2588D220979562009AC275 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */; };
@@ -103,10 +106,13 @@
 /* Begin PBXFileReference section */
 		0C32C4DE524F427EC9DBFF2D /* Pods_MovieInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0C23BA20A5C99A004C05D7 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		3F0C23BC20A5CCE4004C05D7 /* AiringToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiringToday.swift; sourceTree = "<group>"; };
 		3F0C23C220A6A50F004C05D7 /* TvParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvParent.swift; sourceTree = "<group>"; };
 		3F0C23C420A6A65A004C05D7 /* TvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvTableViewCell.swift; sourceTree = "<group>"; };
 		3F0C23C620A6AA6E004C05D7 /* Tvs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tvs.swift; sourceTree = "<group>"; };
+		3F0C23C820A81C1B004C05D7 /* TvOn_The_air.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvOn_The_air.swift; sourceTree = "<group>"; };
+		3F0C23CA20A81C41004C05D7 /* TvPopular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvPopular.swift; sourceTree = "<group>"; };
+		3F0C23CC20A81C4B004C05D7 /* TvTopRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvTopRate.swift; sourceTree = "<group>"; };
+		3F0C23CE20A81CD0004C05D7 /* TvAiringToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvAiringToday.swift; sourceTree = "<group>"; };
 		3F2588CD20978554009AC275 /* KobisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KobisAPI.swift; sourceTree = "<group>"; };
 		3F2588CF20978892009AC275 /* KobisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KobisData.swift; sourceTree = "<group>"; };
 		3F2588D120979562009AC275 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
@@ -215,7 +221,10 @@
 			children = (
 				3F0C23C220A6A50F004C05D7 /* TvParent.swift */,
 				3F0C23C620A6AA6E004C05D7 /* Tvs.swift */,
-				3F0C23BC20A5CCE4004C05D7 /* AiringToday.swift */,
+				3F0C23CE20A81CD0004C05D7 /* TvAiringToday.swift */,
+				3F0C23C820A81C1B004C05D7 /* TvOn_The_air.swift */,
+				3F0C23CA20A81C41004C05D7 /* TvPopular.swift */,
+				3F0C23CC20A81C4B004C05D7 /* TvTopRate.swift */,
 			);
 			path = Tv;
 			sourceTree = "<group>";
@@ -795,6 +804,7 @@
 				FFDB0A4E209A994000CB50EE /* UIColor+Extensions.swift in Sources */,
 				FFDB0A52209A994000CB50EE /* UIAlertController+Extensions.swift in Sources */,
 				FFDB09F02099EC1700CB50EE /* BoxOfficeParent.swift in Sources */,
+				3F0C23CF20A81CD0004C05D7 /* TvAiringToday.swift in Sources */,
 				FFDB0A6B209A994000CB50EE /* Contacts.swift in Sources */,
 				FFDB0A5A209A994000CB50EE /* LocaleStore.swift in Sources */,
 				3FC076932098811B00391BC9 /* BoxOffices.swift in Sources */,
@@ -833,6 +843,7 @@
 				FFDB0A51209A994000CB50EE /* UIApplication+Extensions.swift in Sources */,
 				3F0C23C320A6A50F004C05D7 /* TvParent.swift in Sources */,
 				FFDB0A46209A994000CB50EE /* Array+Extensions.swift in Sources */,
+				3F0C23CD20A81C4B004C05D7 /* TvTopRate.swift in Sources */,
 				FFDB0A60209A994000CB50EE /* TwoTextFieldsViewController.swift in Sources */,
 				3F5E9CB220A03FB300341952 /* NowPlaying.swift in Sources */,
 				3F0C23BB20A5C99A004C05D7 /* APIRequest.swift in Sources */,
@@ -840,6 +851,7 @@
 				3FF88F4220A470200026DDD6 /* TV.swift in Sources */,
 				FFDB0A6F209A994000CB50EE /* DatePickerViewController.swift in Sources */,
 				FFDB0A47209A994000CB50EE /* UISegmentedControl+Extensions.swift in Sources */,
+				3F0C23CB20A81C41004C05D7 /* TvPopular.swift in Sources */,
 				3F0C23C520A6A65A004C05D7 /* TvTableViewCell.swift in Sources */,
 				FFDB0A4F209A994000CB50EE /* UIImage+Extensions.swift in Sources */,
 				FFDB0A69209A994000CB50EE /* PickerViewViewController.swift in Sources */,
@@ -848,7 +860,6 @@
 				FFDB0A49209A994000CB50EE /* UIViewController+Extensions.swift in Sources */,
 				FFC754EE209B688D001D4DE2 /* Extension.swift in Sources */,
 				FFDB0A5D209A994000CB50EE /* PhoneCodeCell.swift in Sources */,
-				3F0C23BD20A5CCE4004C05D7 /* AiringToday.swift in Sources */,
 				FFC754E5209B5FF9001D4DE2 /* Parent.swift in Sources */,
 				3FC0768B20984D7500391BC9 /* TmdbAPI.swift in Sources */,
 				3F5E9CB020A03D6100341952 /* Popular.swift in Sources */,
@@ -857,6 +868,7 @@
 				FFDB0A55209A994000CB50EE /* Locale+Extensions.swift in Sources */,
 				3F6A3C24208A45B90026C4F9 /* AppDelegate.swift in Sources */,
 				FFDB0A4B209A994000CB50EE /* Date+Extension.swift in Sources */,
+				3F0C23C920A81C1B004C05D7 /* TvOn_The_air.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,11 @@ class TvParent: Parent {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let storyboard = UIStoryboard.storyboard(stroyboard: .Tv)
-        let airingToday = storyboard.instantiateViewController(withIdentifier: "airingToday")
-        return [airingToday]
+        let airingToday = storyboard.instantiateViewController(withIdentifier: "TV_AIRINGTODAY")
+        let onTheAir = storyboard.instantiateViewController(withIdentifier: "TV_ONTHEAIR")
+        let popular = storyboard.instantiateViewController(withIdentifier: "TV_POPULAR")
+        let toprate = storyboard.instantiateViewController(withIdentifier: "TV_TOPRATE")
+        return [airingToday, onTheAir, popular, toprate]
     }
 }
+
