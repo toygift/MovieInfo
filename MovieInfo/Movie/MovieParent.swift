@@ -14,7 +14,6 @@ class MovieParent: Parent {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let storyboard = UIStoryboard.storyboard(stroyboard: .Movie)

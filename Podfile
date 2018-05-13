@@ -12,7 +12,7 @@ target 'MovieInfo' do
  pod 'MKProgress', '~> 1.0.6'
  pod 'Fabric'
  pod 'XLPagerTabStrip', '~> 8.0'
-
+ pod 'ExpandableCell'
   # Pods for MovieInfo
 
 	

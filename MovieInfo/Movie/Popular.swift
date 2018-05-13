@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import  MKProgress
 
 class Popular: Movies, IndicatorInfoProvider {
     
@@ -16,6 +17,7 @@ class Popular: Movies, IndicatorInfoProvider {
         
         Movie_PopularRequest().requestTmdb { (response) in
             if let result = response.result.value {
+                MKProgress.hide()
                 self.movies = result
             }
         }
