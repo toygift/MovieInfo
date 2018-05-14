@@ -13,8 +13,9 @@ import Foundation
 //}
 
 struct BoxOfficeResult {
-    let boxOfficeList: [BoxOfficeList]
+    var boxOfficeList: [BoxOfficeList]
     let showRange, boxofficeType: String
+    var expand: Bool
 }
 
 struct BoxOfficeList {

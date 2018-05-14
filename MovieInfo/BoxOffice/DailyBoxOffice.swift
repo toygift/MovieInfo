@@ -28,3 +28,4 @@ class DailyBoxOffice: BoxOffices, IndicatorInfoProvider {
         return IndicatorInfo(title: "데일리")
     }
 }
+

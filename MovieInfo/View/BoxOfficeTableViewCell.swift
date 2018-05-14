@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 import SwiftyJSON
-import ExpandableCell
 
 class BoxOfficeTableViewCellExpand: UITableViewCell {
     @IBOutlet weak var openDt: UILabel!
@@ -20,14 +19,14 @@ class BoxOfficeTableViewCellExpand: UITableViewCell {
     
     func setData(data: BoxOfficeList) {
         self.openDt.text = data.openDt
-        self.salesAmt.text = currencyConvert(currency: data.salesAmt) + "(\(data.salesShare)%)\n" + "전일대비 : (\(currencyConvert(currency: data.salesInten)))" + "(\(data.salesChange)%)"
+//        self.salesAmt.text = currencyConvert(currency: data.salesAmt) + "(\(data.salesShare)%)\n" + "전일대비 : (\(currencyConvert(currency: data.salesInten)))" + "(\(data.salesChange)%)"
         self.salesAcc.text = currencyConvert(currency: data.salesAcc)
-        self.audiCnt.text = thousandConvert(number: data.audiCnt) + "명\n" + "전일대비 : (\(thousandConvert(number: data.audiInten))명)\n" + "증감비율 : (\(data.audiChange)%)"
-        self.scrnCnt.text = thousandConvert(number: data.scrnCnt) + "(\(thousandConvert(number: data.showCnt))번 상영)"
+//        self.audiCnt.text = thousandConvert(number: data.audiCnt) + "명\n" + "전일대비 : (\(thousandConvert(number: data.audiInten))명)\n" + "증감비율 : (\(data.audiChange)%)"
+//        self.scrnCnt.text = thousandConvert(number: data.scrnCnt) + "(\(thousandConvert(number: data.showCnt))번 상영)"
     }
 }
 
-class BoxOfficeTableViewCell: ExpandableCell {
+class BoxOfficeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var rank: UILabel!
     @IBOutlet weak var movienNm: UILabel!

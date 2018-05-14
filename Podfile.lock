@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
   - DateToolsSwift (4.0.0)
-  - ExpandableCell (1.2.2)
   - Fabric (1.7.6)
   - Kingfisher (4.7.0)
   - MKProgress (1.0.6)
@@ -11,7 +10,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - DateToolsSwift
-  - ExpandableCell
   - Fabric
   - Kingfisher (~> 4.5)
   - MKProgress (~> 1.0.6)
@@ -22,7 +20,6 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - DateToolsSwift
-    - ExpandableCell
     - Fabric
     - Kingfisher
     - MKProgress
@@ -32,13 +29,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
-  ExpandableCell: f2d99f9ae03a8c393e268adddaeb7f6d2525a76e
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   MKProgress: 07b14907af409dee1466e17a1200613c388d9807
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: 78dd939a85ecc705a0aa6e3529e5c63e0bd9e486
+PODFILE CHECKSUM: ea20f3a09c761b7a1ee68f0bfb92e038487c8930
 
 COCOAPODS: 1.5.0
