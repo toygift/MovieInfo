@@ -15,7 +15,6 @@ class BoxOffices: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var texts: String?
     var data: [BoxOfficeList] = [] {
         didSet {
-            print("didSet")
             self.tableView.delegate = self
             self.tableView.dataSource = self
         }
@@ -23,6 +22,7 @@ class BoxOffices: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
     }

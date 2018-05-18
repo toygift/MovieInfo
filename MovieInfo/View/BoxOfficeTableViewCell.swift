@@ -10,16 +10,14 @@ import UIKit
 import Kingfisher
 import SwiftyJSON
 
-class BoxOfficeTableViewCellExpand: BoxOfficeTableViewCell {
+class BoxOfficeTableViewCellExpand: UITableViewCell {
     @IBOutlet weak var openDt: UILabel!
     @IBOutlet weak var salesAmt: UILabel!
     @IBOutlet weak var salesAcc: UILabel!
     @IBOutlet weak var audiCnt: UILabel!
     @IBOutlet weak var scrnCnt: UILabel!
 
-    override func setData(data: BoxOfficeList) {
-        
-        
+    func setData(data: BoxOfficeList) {
         self.openDt.text = data.openDt
         self.salesAmt.text = currencyConvert(currency: data.salesAmt) + "(\(data.salesShare)%)\n" + "전일대비 : (\(currencyConvert(currency: data.salesInten)))" + "(\(data.salesChange)%)"
         self.salesAcc.text = currencyConvert(currency: data.salesAcc)
@@ -34,9 +32,7 @@ class BoxOfficeTableViewCell: UITableViewCell {
     @IBOutlet weak var movienNm: UILabel!
     @IBOutlet weak var audiAcc: UILabel!
     
-    
     func setData(data: BoxOfficeList) {
-
         self.rank.text = data.rank
         self.movienNm.text = data.movieNm
         self.audiAcc.text = thousandConvert(number: data.audiAcc) + "명"
