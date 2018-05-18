@@ -8,17 +8,14 @@
 
 import Foundation
 
-//struct MovieInfo {
-//    let boxOfficeResult: BoxOfficeResult
+//struct BoxOfficeResult {
+//
+//    let boxOfficeList: [BoxOfficeList]
+////    let showRange, boxofficeType: String
 //}
 
-struct BoxOfficeResult {
-    var boxOfficeList: [BoxOfficeList]
-    let showRange, boxofficeType: String
-    var expand: Bool
-}
-
 struct BoxOfficeList {
+    var opened: Bool
     let movieNm: String
     let rankOldAndNew: String
     let salesAmt, salesInten, salesAcc, salesShare, salesChange: String

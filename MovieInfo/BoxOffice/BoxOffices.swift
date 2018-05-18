@@ -12,48 +12,62 @@ import XLPagerTabStrip
 class BoxOffices: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var texts: String!
-    var data: BoxOfficeResult!
-    var expand: Bool = false
-    var boxOfficeList: [BoxOfficeList] = [] {
+    var texts: String?
+    var data: [BoxOfficeList] = [] {
         didSet {
+            print("didSet")
             self.tableView.delegate = self
             self.tableView.dataSource = self
-            self.tableView.reloadData()
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        self.tableView.rowHeight = UITableViewAutomaticDimension
-//        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
     }
 }
 
 extension BoxOffices {
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.data.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.boxOfficeList.count
+        if self.data[section].opened == true {
+            return 2
+        } else {
+            return 1
+        }
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cellforrowat")
-        if self.expand == false {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOffice", for: indexPath) as? BoxOfficeTableViewCell
-            cell?.setData(data: self.data.boxOfficeList[indexPath.row])
-            return cell!
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOffice", for: indexPath) as? BoxOfficeTableViewCell else { return UITableViewCell() }
+            cell.setData(data: self.data[indexPath.section])
+            return cell
+            
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOfficeExpand", for: indexPath) as? BoxOfficeTableViewCellExpand
-            cell?.setData(data: self.data.boxOfficeList[indexPath.row])
-            return cell!
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "BoxOfficeExpand", for: indexPath) as? BoxOfficeTableViewCellExpand else { return UITableViewCell() }
+            cell.setData(data: self.data[indexPath.section])
+            return cell
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didselect:")
-        self.expand = !self.expand
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        if indexPath.row == 0 {
+            if self.data[indexPath.section].opened == true {
+                self.data[indexPath.section].opened = false
+                let section = IndexSet.init(integer: indexPath.section)
+                self.tableView.reloadSections(section, with: .none)
+            } else {
+                self.data[indexPath.section].opened = true
+                let section = IndexSet.init(integer: indexPath.section)
+                self.tableView.reloadSections(section, with: .none
+                )
+            }
+        }
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 }

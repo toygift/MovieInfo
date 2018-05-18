@@ -20,7 +20,7 @@ class DailyBoxOffice: BoxOffices, IndicatorInfoProvider {
         KobisAPI.shared.boxOffice(url: url, indicator: true) { (res) -> (Void) in
             if let json = res {
                 self.data = KobisData.shared.dailyBoxOffice(response: json)
-                self.boxOfficeList = self.data.boxOfficeList
+                self.tableView.reloadData()
             }
         }
     }

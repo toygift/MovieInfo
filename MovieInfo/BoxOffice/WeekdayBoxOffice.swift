@@ -19,7 +19,7 @@ class WeekdayBoxOffice: BoxOffices, IndicatorInfoProvider {
         
         KobisAPI.shared.boxOffice(url: url, indicator: true) { (res) -> (Void) in
             if let json = res {
-                self.data = KobisData.shared.weeklyBoxOffice(response: json)
+//                self.data = KobisData.shared.weeklyBoxOffice(response: json)
 //                self.boxOfficeList = self.data.boxOfficeList
             }
         }
