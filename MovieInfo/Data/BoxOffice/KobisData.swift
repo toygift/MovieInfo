@@ -10,15 +10,30 @@ import Foundation
 import DateToolsSwift
 
 let KOBIS_APIKEY = "6e1cdfab5749691be4c51818a1e59919"
-let yesterday = Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent)
 
 struct BoxOffice_Daily: APIRequest {
     typealias T = BoxOfficeResult
-    
-//    let url = "https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(KOBIS_APIKEY)&targetDt=\(yesterday)"
     let domain = "https://www.kobis.or.kr"
     let api = "kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
-    let router = "key=\(KOBIS_APIKEY)&targetDt=\(yesterday)"
+    let router = "key=\(KOBIS_APIKEY)&targetDt=\(Date().subtract(1.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent))"
+}
+struct BoxOffice_Weekly: APIRequest {
+    typealias T = BoxOfficeResults
+    let domain = "https://www.kobis.or.kr"
+    let api = "kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json"
+    let router = "key=\(KOBIS_APIKEY)&targetDt=\(Date().subtract(7.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent))&weekGb=\(0)"
+}
+struct BoxOffice_Weekend: APIRequest {
+    typealias T = BoxOfficeResults
+    let domain = "https://www.kobis.or.kr"
+    let api = "kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json"
+    let router = "key=\(KOBIS_APIKEY)&targetDt=\(Date().subtract(7.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent))&weekGb=\(1)"
+}
+struct BoxOffice_Weekday: APIRequest {
+    typealias T = BoxOfficeResults
+    let domain = "https://www.kobis.or.kr"
+    let api = "kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json"
+    let router = "key=\(KOBIS_APIKEY)&targetDt=\(Date().subtract(7.days).format(with: "yyyyMMdd", timeZone: TimeZone.autoupdatingCurrent))&weekGb=\(2)"
 }
 
 

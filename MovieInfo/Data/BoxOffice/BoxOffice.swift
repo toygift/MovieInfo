@@ -9,14 +9,29 @@
 import Foundation
 
 struct BoxOfficeResult: Codable {
-    let boxOfficeResult: DailyBoxOfficeList
+    var boxOfficeResult: DailyBoxOfficeList
     
     enum CodingKeys: String, CodingKey {
         case boxOfficeResult = "boxOfficeResult"
     }
 }
+struct BoxOfficeResults: Codable {
+    
+    var boxOfficeResult: WeeklyBoxOfficeList
+    enum CodingKeys: String, CodingKey {
+        case boxOfficeResult = "boxOfficeResult"
+    }
+}
+struct WeeklyBoxOfficeList: Codable {
+    var weeklyBoxOfficeList: [BoxOffice]
+    
+    enum CodingKeys: String, CodingKey {
+        case weeklyBoxOfficeList = "weeklyBoxOfficeList"
+    }
+}
+
 struct DailyBoxOfficeList: Codable {
-    let dailyBoxOfficeList: [BoxOffice]
+    var dailyBoxOfficeList: [BoxOffice]
 
     enum CodingKeys: String, CodingKey {
         case dailyBoxOfficeList = "dailyBoxOfficeList"
@@ -32,7 +47,6 @@ struct BoxOffice: Codable {
     let showCnt, scrnCnt, openDt, movieCd: String
     
     enum CodingKeys: String, CodingKey {
-//        case opened
         case movieNm = "movieNm"
         case rankOldAndNew = "rankOldAndNew"
         case salesAmt = "salesAmt"

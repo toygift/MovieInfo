@@ -18,10 +18,9 @@ protocol APIRequest {
     associatedtype T: Decodable
 }
 extension APIRequest {
-    // T is used in DataResponse<T>
     func requestAPI(completionHandler: @escaping (DataResponse<T>) -> Void) {
         let url = "\(domain)/\(api)?\(router)"
-//        MKProgress.show()
+        MKProgress.show()
         print("url",url)
         Alamofire.request(url).responseDecodable(completionHandler: completionHandler)
     }
