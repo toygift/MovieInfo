@@ -16,7 +16,7 @@ class Latest: Movies, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Movie_LatestRequest().requestTmdb { (response) in
+        Movie_LatestRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.movies = result

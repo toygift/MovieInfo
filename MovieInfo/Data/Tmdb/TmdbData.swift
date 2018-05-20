@@ -11,33 +11,33 @@ import Foundation
 let TMDB_APIKEY = "51d168b67b261fc77c46c529e1d6b6ef"
 let TMDB_POSTER = "https://image.tmdb.org/t/p/original"
 
-struct Movie_TopRateRequest: TMDBRequest {
+struct Movie_TopRateRequest: APIRequest {
     typealias T = Movie
-    
+    let domain = "https://api.themoviedb.org/3"
     let api = "movie/top_rated"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
 }
-struct Movie_PopularRequest: TMDBRequest {
+struct Movie_PopularRequest: APIRequest {
     typealias T = Movie
-    
+    let domain = "https://api.themoviedb.org/3"
     let api = "movie/popular"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
 }
-struct Movie_NowPlayingRequest: TMDBRequest {
+struct Movie_NowPlayingRequest: APIRequest {
     typealias T = Movie
-    
+    let domain = "https://api.themoviedb.org/3"
     let api = "movie/now_playing"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
 }
-struct Movie_UpComingRequest: TMDBRequest {
+struct Movie_UpComingRequest: APIRequest {
     typealias T = Movie
-    
+    let domain = "https://api.themoviedb.org/3"
     let api = "movie/upcoming"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR&page=1"
 }
-struct Movie_LatestRequest: TMDBRequest {
+struct Movie_LatestRequest: APIRequest {
     typealias T = Movie
-    
+    let domain = "https://api.themoviedb.org/3"
     let api = "movie/latest"
     let router = "api_key=\(TMDB_APIKEY)&language=ko-KR"
 }

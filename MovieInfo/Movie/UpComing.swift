@@ -15,7 +15,7 @@ class UpComing: Movies, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Movie_UpComingRequest().requestTmdb { (response) in
+        Movie_UpComingRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.movies = result

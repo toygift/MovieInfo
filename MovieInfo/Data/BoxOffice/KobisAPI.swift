@@ -11,8 +11,6 @@ import Alamofire
 import SwiftyJSON
 import MKProgress
 
-let KOBIS_APIKEY = "6e1cdfab5749691be4c51818a1e59919"
-
 class KobisAPI: NSObject {
     
     static let shared = KobisAPI()

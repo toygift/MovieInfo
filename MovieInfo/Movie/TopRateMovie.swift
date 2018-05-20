@@ -15,7 +15,7 @@ class TopRateMovie: Movies, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Movie_TopRateRequest().requestTmdb { (response) in
+        Movie_TopRateRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.movies = result

@@ -14,7 +14,7 @@ class TvAiringToday: Tvs, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TV_AiringTodayRequest().requestTmdb { (response) in
+        TV_AiringTodayRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.tvs = result

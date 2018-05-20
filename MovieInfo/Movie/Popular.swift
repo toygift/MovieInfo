@@ -15,7 +15,7 @@ class Popular: Movies, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Movie_PopularRequest().requestTmdb { (response) in
+        Movie_PopularRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.movies = result

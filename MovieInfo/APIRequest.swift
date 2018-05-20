@@ -10,19 +10,18 @@ import Foundation
 import Alamofire
 import MKProgress
 
-protocol TMDBRequest {
+protocol APIRequest {
     var api: String { get }
     var router: String { get }
-    
+    var domain: String { get }
     
     associatedtype T: Decodable
 }
-extension TMDBRequest {
-    var domain: String { return "https://api.themoviedb.org/3" }
+extension APIRequest {
     // T is used in DataResponse<T>
-    func requestTmdb(completionHandler: @escaping (DataResponse<T>) -> Void) {
+    func requestAPI(completionHandler: @escaping (DataResponse<T>) -> Void) {
         let url = "\(domain)/\(api)?\(router)"
-        MKProgress.show()
+//        MKProgress.show()
         print("url",url)
         Alamofire.request(url).responseDecodable(completionHandler: completionHandler)
     }

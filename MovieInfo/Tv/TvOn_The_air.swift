@@ -15,7 +15,7 @@ class TvOn_The_air: Tvs, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TV_OnTheAirRequest().requestTmdb { (response) in
+        TV_OnTheAirRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.tvs = result

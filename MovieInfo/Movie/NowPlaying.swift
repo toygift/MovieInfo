@@ -15,7 +15,7 @@ class NowPlaying: Movies, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Movie_NowPlayingRequest().requestTmdb { (response) in
+        Movie_NowPlayingRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.movies = result

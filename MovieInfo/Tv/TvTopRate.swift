@@ -14,7 +14,7 @@ class TvTopRate: Tvs, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TV_TopRateRequest().requestTmdb { (response) in
+        TV_TopRateRequest().requestAPI { (response) in
             if let result = response.result.value {
                 MKProgress.hide()
                 self.tvs = result
