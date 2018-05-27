@@ -15,7 +15,6 @@ class Tvs: UIViewController, UITableViewDelegate, UITableViewDataSource {
         didSet {
             self.tableView.delegate = self
             self.tableView.dataSource = self
-            self.tableView.reloadData()
         }
     }
     override func viewDidLoad() {

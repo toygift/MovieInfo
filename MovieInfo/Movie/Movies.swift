@@ -15,7 +15,6 @@ class Movies: UIViewController, UITableViewDelegate, UITableViewDataSource {
         didSet {
             self.tableView.delegate = self
             self.tableView.dataSource = self
-            self.tableView.reloadData()// 이동시켜!
         }
     }
     override func viewDidLoad() {

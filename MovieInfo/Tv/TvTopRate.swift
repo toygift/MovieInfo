@@ -18,6 +18,7 @@ class TvTopRate: Tvs, IndicatorInfoProvider {
             if let result = response.result.value {
                 MKProgress.hide()
                 self.tvs = result
+                self.tableView.reloadData()
             }
         }
     }

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,46 +22,64 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="822"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Movie" rowHeight="547" id="etz-MP-ANP" customClass="MovieTableViewCell" customModule="MovieInfo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="547"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Movie" rowHeight="161" id="etz-MP-ANP" customClass="MovieTableViewCell" customModule="MovieInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etz-MP-ANP" id="FWJ-Zv-hO8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="546.66666666666663"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-NB-r0e">
-                                                    <rect key="frame" x="15" y="21" width="96" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNz-Sp-R4U">
+                                                    <rect key="frame" x="133.66666666666663" y="16.333333333333332" width="221.33333333333337" height="20.999999999999996"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-wY-CEK">
+                                                    <rect key="frame" x="133.66666666666663" y="86.333333333333329" width="221.33333333333337" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-hB-Hjz">
+                                                    <rect key="frame" x="133.66666666666663" y="123.33333333333331" width="221.33333333333337" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개봉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-gq-JTG">
+                                                    <rect key="frame" x="133.66666666666663" y="51.333333333333336" width="221.33333333333337" height="21.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-NB-r0e">
+                                                    <rect key="frame" x="17.666666666666671" y="16.333333333333329" width="96" height="127.99999999999999"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="Rnz-zn-j4E"/>
+                                                        <constraint firstAttribute="height" constant="128" id="qOq-TM-uj2"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNz-Sp-R4U">
-                                                    <rect key="frame" x="149" y="31" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="평점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-wY-CEK">
-                                                    <rect key="frame" x="143" y="89" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-hB-Hjz">
-                                                    <rect key="frame" x="137" y="128" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="개봉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-gq-JTG">
-                                                    <rect key="frame" x="149" y="60" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tg7-wY-CEK" firstAttribute="trailing" secondItem="xNz-Sp-R4U" secondAttribute="trailing" id="1wR-Su-VQ2"/>
+                                                <constraint firstItem="gqe-NB-r0e" firstAttribute="centerX" secondItem="FWJ-Zv-hO8" secondAttribute="centerX" multiplier="0.35" id="A8K-0o-pWe"/>
+                                                <constraint firstItem="SLB-hB-Hjz" firstAttribute="bottom" secondItem="gqe-NB-r0e" secondAttribute="bottom" id="E8N-kJ-hr7"/>
+                                                <constraint firstItem="F90-gq-JTG" firstAttribute="leading" secondItem="xNz-Sp-R4U" secondAttribute="leading" id="Fy9-Kw-yag"/>
+                                                <constraint firstItem="F90-gq-JTG" firstAttribute="top" secondItem="xNz-Sp-R4U" secondAttribute="bottom" constant="14" id="Ixa-JW-SCk"/>
+                                                <constraint firstItem="tg7-wY-CEK" firstAttribute="top" secondItem="F90-gq-JTG" secondAttribute="bottom" constant="14" id="JHD-9f-uB0"/>
+                                                <constraint firstItem="SLB-hB-Hjz" firstAttribute="top" secondItem="tg7-wY-CEK" secondAttribute="bottom" constant="15.999999999999986" id="MZe-Ew-bhW"/>
+                                                <constraint firstItem="F90-gq-JTG" firstAttribute="trailing" secondItem="xNz-Sp-R4U" secondAttribute="trailing" id="SEc-A1-Tbp"/>
+                                                <constraint firstItem="xNz-Sp-R4U" firstAttribute="top" secondItem="gqe-NB-r0e" secondAttribute="top" id="SdY-Jf-fJV"/>
+                                                <constraint firstItem="xNz-Sp-R4U" firstAttribute="leading" secondItem="gqe-NB-r0e" secondAttribute="trailing" constant="20" id="b4A-qw-ubd"/>
+                                                <constraint firstAttribute="trailing" secondItem="xNz-Sp-R4U" secondAttribute="trailing" constant="20" id="iLk-Cy-140"/>
+                                                <constraint firstItem="gqe-NB-r0e" firstAttribute="centerY" secondItem="FWJ-Zv-hO8" secondAttribute="centerY" id="mrj-Ra-BEF"/>
+                                                <constraint firstItem="SLB-hB-Hjz" firstAttribute="leading" secondItem="xNz-Sp-R4U" secondAttribute="leading" id="s36-Yd-ZmD"/>
+                                                <constraint firstItem="tg7-wY-CEK" firstAttribute="leading" secondItem="xNz-Sp-R4U" secondAttribute="leading" id="sVF-hR-s1b"/>
+                                                <constraint firstItem="gqe-NB-r0e" firstAttribute="top" secondItem="FWJ-Zv-hO8" secondAttribute="top" constant="16.329999999999998" id="t4N-2C-9lg"/>
+                                                <constraint firstItem="SLB-hB-Hjz" firstAttribute="trailing" secondItem="xNz-Sp-R4U" secondAttribute="trailing" id="wiF-zE-sMk"/>
+                                                <constraint firstAttribute="bottom" secondItem="gqe-NB-r0e" secondAttribute="bottom" constant="16.329999999999998" id="y6Y-Fo-KDA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="popularity" destination="SLB-hB-Hjz" id="DIx-M9-sWW"/>

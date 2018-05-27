@@ -20,6 +20,7 @@ class Latest: Movies, IndicatorInfoProvider {
             if let result = response.result.value {
                 MKProgress.hide()
                 self.movies = result
+                self.tableView.reloadData()
             }
         }
     }
