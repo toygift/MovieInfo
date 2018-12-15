@@ -13,13 +13,12 @@ struct Movie: Codable {
     
     enum CodingKeys: String, CodingKey {
         case movielist = "results"
-        
     }
 }
 
 struct MovieList: Codable {
     let posterPath, backdropPath: String
-    let voteCount: Int
+    let voteCount, id: Int
     let overview, originalTitle: String
     let voteAverage, popularity: Double
     let releaseDate: String
@@ -30,6 +29,7 @@ struct MovieList: Codable {
         case posterPath = "poster_path"
         case backdropPath = "backdrop_path"
         case voteCount = "vote_count"
+        case id = "id"
         case overview = "overview"
         case originalTitle = "original_title"
         case voteAverage = "vote_average"

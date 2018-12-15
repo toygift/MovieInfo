@@ -30,7 +30,6 @@ class Parent: ButtonBarPagerTabStripViewController {
             textField.action { textField in
                 let text = BoxOffices()
                 text.texts = textField.text
-                print(text.texts)
             }
         }
         alert.addOneTextField(configuration: config)

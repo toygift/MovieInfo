@@ -9,8 +9,9 @@
 import UIKit
 
 class Movies: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView:UITableView!
+    
     var movies: Movie! {
         didSet {
             self.tableView.delegate = self
@@ -21,6 +22,13 @@ class Movies: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "detail" {
+//            let nvc = segue.destination as! MovieDetail
+//            nvc.data = sender as? MovieList
+//            nvc.delegate = self
+//        }
     }
 }
 
@@ -35,5 +43,8 @@ extension Movies {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "detail", sender: self.movies.movielist[indexPath.row])
     }
 }

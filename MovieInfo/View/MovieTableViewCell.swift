@@ -8,7 +8,6 @@
 
 import UIKit
 import Kingfisher
-import SwiftyJSON
 
 class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var poster: UIImageView!
